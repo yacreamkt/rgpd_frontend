@@ -4,6 +4,7 @@ import CheckBoxFormat from '../../../../../utils/components/checkboxform/CheckBo
 import SaveButton from '../../../../../utils/components/savebutton/ButtonSave';
 import FieldTextFormat from '../../../../../utils/components/fieldtextformat/FieldTextFormat';
 import { getPrivacySettings, patchPrivacySettings  } from "../../../../../../data/datasource/remote/service/websites/privacy-settings/HandlesDomain";
+import LoadingPage from '../../../../../utils/components/loadingpage/LoadingPage';
 
 function PrivacidadPage({id}) {
   const [text, setText] = useState(""); // Para almacenar texto adicional
@@ -61,11 +62,17 @@ function PrivacidadPage({id}) {
     setText(event.target.value); // Actualizar el estado de texto
   };
 
+
+  if (loading) {
+      return <LoadingPage/>;
+  }
+
+  if (!purposes) {
+      return <p>Error al cargar los datos.</p>;
+  }
+
   return (
     <div className={styles['container-caracteristicas']}>
-      {loading ? (
-        <p>Cargando configuraciones...</p>
-      ) : (
         <>
           {/* Primer Texto */}
           <div className={styles['information']}>
@@ -92,7 +99,6 @@ function PrivacidadPage({id}) {
           </div>
           <SaveButton onClick={handleSaveButton} />
         </>
-      )}
     </div>
   );
 }

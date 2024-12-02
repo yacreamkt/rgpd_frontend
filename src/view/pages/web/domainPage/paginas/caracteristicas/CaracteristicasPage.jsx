@@ -4,6 +4,7 @@ import styles from './Caracteristicas.module.css';
 import SaveButton from '../../../../../utils/components/savebutton/ButtonSave';
 import FieldTextFormat from '../../../../../utils/components/fieldtextformat/FieldTextFormat';
 import { getCharacteristicsId, putCharacteristicsId } from "../../../../../../data/datasource/remote/service/websites/caracteristicas/HandlesCharacteristics";
+import LoadingPage from '../../../../../utils/components/loadingpage/LoadingPage';
 
 function CaracteristicasPage({ domai, id }) {
     const [text, setText] = useState(domai);
@@ -53,7 +54,7 @@ function CaracteristicasPage({ domai, id }) {
     
 
     if (loading) {
-        return <p>Cargando datos...</p>;
+        return <LoadingPage/>;
     }
 
     if (!formData) {

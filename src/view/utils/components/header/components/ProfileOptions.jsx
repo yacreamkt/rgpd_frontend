@@ -42,7 +42,7 @@ const ProfileOptions = ({ onLogout, clientId, organizationName }) => {
           </ul>
           <button className={styles.logoutButton} onClick={onLogout}>
             <FontAwesomeIcon icon={faSignOutAlt} className={styles.menuIcon} />
-            Desconectar
+            Cerrar sesión
           </button>
         </div>
       )}

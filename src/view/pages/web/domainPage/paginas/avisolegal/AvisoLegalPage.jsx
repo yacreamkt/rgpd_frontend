@@ -4,6 +4,7 @@ import SaveButton from '../../../../../utils/components/savebutton/ButtonSave'
 import FieldTextFormat from '../../../../../utils/components/fieldtextformat/FieldTextFormat'
 import QuestionsFormat from '../../../../../utils/components/radiobuttonformat/RadioButtonFormat'
 import styles from './AvisoLegal.module.css'
+import LoadingPage from '../../../../../utils/components/loadingpage/LoadingPage';
 
 
 function AvisoLegalPage ({id}) {
@@ -48,7 +49,7 @@ function AvisoLegalPage ({id}) {
 
 
   if (loading) {
-      return <p>Cargando datos...</p>;
+      return <LoadingPage/>;
   }
 
   if (!formData) {

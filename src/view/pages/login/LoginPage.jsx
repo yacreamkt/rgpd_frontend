@@ -1,41 +1,48 @@
 import React, { useState } from "react";
 import styles from "./LoginPage.module.css";
 import { postLoginService } from "../../../data/datasource/remote/service/auth/LoginService";
-import icon from "../../../assets/icono.png"
+import LoadingPage from "../../utils/components/loadingpage/LoadingPage"; // Asegúrate de importar correctamente
+import icon from "../../../assets/icono.png";
 
 const LoginPage = ({ onLogin }) => {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [fieldErrors, setFieldErrors] = useState({}); // Errores específicos de campo
-    const [globalError, setGlobalError] = useState(""); // Error global
-  
-    const handleSubmit = async (event) => {
-      event.preventDefault();
-      setFieldErrors({});
-      setGlobalError("");
-    
-      try {
-        const data = await postLoginService({ email, password });
-        // Guardar tokens en localStorage
-        localStorage.setItem("accessToken", data.tokens.access);
-        localStorage.setItem("refreshToken", data.tokens.refresh);
-    
-        onLogin(data.tokens.access); // Notifica al componente principal
-      } catch (error) {
-        if (error.status === 400) {
-          setFieldErrors(error);
-        } else {
-          setGlobalError(error.detail || "Ocurrió un error inesperado.");
-        }
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [fieldErrors, setFieldErrors] = useState({});
+  const [globalError, setGlobalError] = useState("");
+  const [isLoading, setIsLoading] = useState(false); // Estado para controlar el popup de carga
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setFieldErrors({});
+    setGlobalError("");
+    setIsLoading(true); // Muestra el popup de carga
+
+    try {
+      const data = await postLoginService({ email, password });
+      localStorage.setItem("accessToken", data.tokens.access);
+      localStorage.setItem("refreshToken", data.tokens.refresh);
+      onLogin(data.tokens.access); // Notifica al componente principal
+    } catch (error) {
+      if (error.status === 400) {
+        setFieldErrors(error);
+      } else {
+        setGlobalError(error.detail || "Ocurrió un error inesperado.");
       }
-    };    
-  
+    } finally {
+      setIsLoading(false); // Oculta el popup de carga
+    }
+  };
 
   return (
     <div className={styles.authContainer}>
+      {isLoading && (
+        <div className={styles.popupOverlay}>
+          <LoadingPage />
+        </div>
+      )}
       <div className={styles.authBox}>
         <img
-          src={icon} // Cambia esta ruta por la ruta correcta de tu logo
+          src={icon}
           alt="Logo"
           className={styles.authLogo}
         />
@@ -46,7 +53,7 @@ const LoginPage = ({ onLogin }) => {
               placeholder="Usuario"
               className={styles.authInput}
               value={email}
-              onChange={(e) => setEmail(e.target.value)} // Actualiza el estado
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
@@ -56,12 +63,16 @@ const LoginPage = ({ onLogin }) => {
               placeholder="Contraseña"
               className={styles.authInput}
               value={password}
-              onChange={(e) => setPassword(e.target.value)} // Actualiza el estado
+              onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>
-          {fieldErrors.email && <p className={styles.errorMessage}>{fieldErrors.email[0]}</p>}
-          {globalError && <p className={styles.errorMessage}>{globalError}</p>}
+          {fieldErrors.email && (
+            <p className={styles.errorMessage}>{fieldErrors.email[0]}</p>
+          )}
+          {globalError && (
+            <p className={styles.errorMessage}>{globalError}</p>
+          )}
           <div className={styles.rememberMe}>
             <input type="checkbox" id="remember" />
             <label htmlFor="remember">Recordar mis datos</label>

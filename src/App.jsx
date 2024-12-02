@@ -14,6 +14,7 @@ function App() {
   useEffect(() => {
     // Verifica si hay un token en localStorage
     const token = localStorage.getItem('accessToken');
+    // Esto se debe cambiar a un endpoint que valide si esta firmado por el servidor
     setIsAuthenticated(!!token); // Si existe un token, el usuario está autenticado
   }, []);
 
