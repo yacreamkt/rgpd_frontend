@@ -1,0 +1,36 @@
+.field-text-format {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 30px;
+}
+  
+.row {
+  flex-direction: row;
+  align-items: center;
+}
+  
+.column {
+  flex-direction: column; /* Columna: elementos dispuestos verticalmente */
+}
+  
+.text-input{
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 80%;
+  outline: none;
+}
+
+.rigth{
+  font-size: 15px;
+  color: gray;
+  margin-bottom: 0;
+}
+
+.center {
+  text-align: right;
+  flex: 1;
+  min-width: 30%;
+  font-size: 15px;
+  color: gray;
+}

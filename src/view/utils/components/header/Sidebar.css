@@ -1,0 +1,113 @@
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 35%;
+    height: 100%;
+    background-color: #fff;
+    transition: left 0.5s ease;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+  
+  .sidebar__header {
+    display: flex;
+    justify-content: flex-end; /* Alinea el botón a la derecha */
+    align-items: center; /* Centra verticalmente */
+    height: 30px; /* Altura más pequeña para la fila */
+    padding: 0px; /* Ajusta el espacio alrededor */
+    border-bottom: 1px solid #eee; /* Opcional: Separador visual */
+  }
+  
+  /* Estilo del botón "X" */
+  .sidebar__close {
+    font-size: 12px; /* Tamaño del botón */
+    /* background: none; */
+    /* border: none; */
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .sidebar__close:hover {
+    border: none;
+  }
+  
+  /* Contenido principal del sidebar */
+  .sidebar__content {
+    padding: 20px; /* Espaciado alrededor del menú */
+    overflow-y: auto; /* Permite el desplazamiento si el contenido es muy largo */
+  }
+  
+  
+  /* Estilo base para el slider */
+  .sidebar__menu ul {
+    display: block; /* Para que los elementos sean verticales */
+    gap: 10px; /* Opcional: Define un espacio vertical */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilo para los elementos del menú */
+  .sidebar__menu li, .header__menu__nav li {
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #555;
+    padding: 10px 10px; /* Ajusta según el diseño */
+    /* border-bottom: 1px solid #eee; Línea de separación (opcional) */
+  }
+  
+  /* Estilo adicional para elementos activos */
+  .sidebar__menu li.active, .header__menu__nav li.active {
+    color: var(--verdeApp);
+    border-bottom: 2px solid var(--verdeApp);
+    background-color: var(--fondo);
+  }
+  
+  
+  /* Overlay que oscurece el fondo */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Negro semitransparente */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 998; /* Debe estar detrás del sidebar */
+  }
+  
+  /* Cuando el sidebar está abierto */
+  .overlay.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Ajusta el z-index del sidebar para estar encima del overlay */
+  .sidebar {
+    z-index: 999;
+  }
+
+  
+li:hover{
+    color: var(--verdeApp);
+  }
+
+  @media (max-width: 1025px) {
+    li:hover{
+      background-color: var(--fondo);
+    }
+    
+  }
+
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 60%;
+    }
+  }

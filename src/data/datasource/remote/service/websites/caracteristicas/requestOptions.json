@@ -1,0 +1,14 @@
+{
+    "comercio_electronico": {
+      "compras_contrataciones_disponibles": "",
+      "oferta_tienda_online": "",
+      "servicio_mensajeria_contratado": ""
+    },
+    "servidor": {
+      "propiedad": "",
+      "ubicacion_fisica": ""
+    },
+    "seguridad": {
+      "certificado_ssl_instalado": ""
+    }
+}

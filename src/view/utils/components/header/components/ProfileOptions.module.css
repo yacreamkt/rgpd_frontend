@@ -1,0 +1,78 @@
+.profileOptions {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .profileIcon {
+    font-size: 17px;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .profileMenu {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+  
+  .profileHeader {
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .profileHeader p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .profileHeader strong {
+    font-weight: bold;
+  }
+  
+  .profileMenuList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .profileMenuList li {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .profileMenuList li:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .menuIcon {
+    margin-right: 8px;
+    color: #6c757d;
+  }
+  
+  .logoutButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    font-size: 14px;
+    color: #fff;
+    background-color: var(--verdeApp);
+    border: none;
+    border-radius: 0 0 8px 8px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .logoutButton:hover {
+    background-color: var(--verdeApp2);
+  }
+  

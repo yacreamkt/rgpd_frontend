@@ -1,0 +1,26 @@
+/* global.css */
+:root {
+
+  --fondo: #f5f5f7;
+  --verdeApp: #00b17c;
+  --verdeApp2: #076147d4;
+  --grisApp: #656363;
+  /* --azulApp: #1f4b8f; */
+  /* --amarilloApp: #f4d03f; */
+  
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--fondo);
+  box-sizing: border-box;
+  /* font-family: 'Arial', sans-serif; */
+  /* font-family: monospace; */
+  /* font-family: cursive; */
+}
+
+::selection {
+  background-color: var(--verdeApp); /* Fondo del texto resaltado */
+  color: #ffffff; /* Color del texto dentro del fondo seleccionado */
+}

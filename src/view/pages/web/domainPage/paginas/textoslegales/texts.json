@@ -1,0 +1,44 @@
+{
+    "TextosLegalesItems": {
+      "item1": {
+        "title": "Características",
+        "text": "Toda web que realiza actividades comerciales en España debería cumplir las siguientes leyes: Ley Orgánica de Protección de Datos y Garantía de Derechos Digitales (LOPDGDD) y Ley de Servicios de la Sociedad de la Información (LSSI).",
+        "buttonLabel1": "⚙️ Configurar"
+      },
+      "item2": {
+        "title": "Aviso legal",
+        "text": "El aviso legal es el documento que recoge las cuestiones que la Ley de Servicios de la Información (LSSI) obliga a incluir prácticamente en todas las webs.",
+        "buttonLabel1": "⚙️ Configurar",
+        "buttonLabel2": "⬇️ Descargar"
+      },
+      "item3": {
+        "title": "Privacidad",
+        "text": "Documento legal que, como empresario, debo tener para informar a mis clientes y usuarios sobre los medios a través de los cuales he obtenido sus datos de carácter personal y sobre el tratamiento que voy a realizar con ellos.",
+        "buttonLabel1": "⚙️ Configurar",
+        "buttonLabel2": "⬇️ Descargar"
+      },
+      "item4": {
+        "title": "Cookies",
+        "text": "Son herramientas que tienen un papel esencial para la prestación de numerosos servicios de la sociedad de la información. Entre otros, permiten a una página web almacenar y recuperar información.",
+        "buttonLabel1": "⚙️ Configurar",
+        "buttonLabel2": "⬇️ Descargar"
+      },
+      "item5": {
+        "title": "Formularios",
+        "text": "El artículo 5 apartado 1 de la Ley Orgánica de Protección de Datos (LOPD) establece que los interesados a los que se soliciten datos personales deberán ser previamente informados de modo expreso.",
+        "buttonLabel1": "⚙️ Configurar"
+      },
+      "item6": {
+        "title": "Condiciones de contratación",
+        "text": "Establece las condiciones generales de contratación de productos o los términos y condiciones de servicio para cumplir correctamente la ley vigente.",
+        "buttonLabel1": "⚙️ Configurar",
+        "buttonLabel2": "⬇️ Descargar condiciones",
+        "buttonLabel3": "⬇️ Descargar terminos"
+      },
+      "item7": {
+        "title": "Proceso completado",
+        "text": "Enhorabuena, su web cumple con la legalidad vigente."
+      }
+    }
+  }
+  
