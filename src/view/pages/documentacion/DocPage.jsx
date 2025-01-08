@@ -25,7 +25,7 @@ const DocPage = ({onNavigate}) => {
     }, []);
 
     const handleNavigation = (destination) => {
-      onNavigate(destination, formData); // Navega a la página correspondiente
+        onNavigate(destination, null, null, formData); // Navega a la página correspondiente
     };
   
 

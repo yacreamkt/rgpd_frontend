@@ -26,7 +26,7 @@ function App() {
     setIsAuthenticated(true);
   };
 
-  const handleNavigate = (page, data, domainName, id) => {
+  const handleNavigate = (page, domainName, id, data) => {
     setCurrentPage(page);
     if (data) setDocData(data);
     if (domainName) setDomain(domainName);
