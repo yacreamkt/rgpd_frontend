@@ -1,0 +1,143 @@
+.tableContainer {
+    width: 90%;
+    padding: 10px;
+    margin-top: 40px;
+    font-family: Arial, sans-serif;
+    /* background-color: var(--fondo); */
+    border:solid 1px var(--fondo);
+    border-radius: 10px;
+  }
+
+  .separator {
+    border-bottom:solid 1px var(--fondo);
+}
+  
+  .tableHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-bottom: 10px; */
+  }
+  
+.addCookieBtn {
+    background-color: var(--verdeApp);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.cookiesTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    table-layout: fixed
+}
+  
+.cookiesTable th,
+.cookiesTable td {
+    border: none;
+    padding: 10px;
+    text-align: left;
+    white-space: normal; /* Permite que el texto se ajuste en varias líneas */
+    word-wrap: break-word; /* Ajusta el texto si es muy largo */
+    word-break: break-word; /* Fuerza un salto de línea si no hay espacios */
+    overflow: hidden; /* Oculta contenido desbordado si es necesario */
+}
+
+  
+  /* Añade solo líneas horizontales, si las necesitas */
+.cookiesTable tr{
+    border-bottom: 1px solid var(--fondo);
+}
+  
+.cookiesTable th {
+    background-color: var(--fondo);
+}
+  
+  /* Opcional: Estilizar filas al pasar el mouse */
+.cookiesTable tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Establece anchos específicos o proporcionales para las columnas */
+.cookiesTable th:nth-child(1), /* Columna de checkbox */
+.cookiesTable td:nth-child(1) {
+    width: 5%; /* Asegura que los checkboxes ocupen un espacio pequeño */
+}
+
+.cookiesTable th:nth-child(2), /* Columna de cookies */
+.cookiesTable td:nth-child(2) {
+    width: 25%; /* Ancho de 25% para las cookies */
+}
+
+.cookiesTable th:nth-child(3), /* Columna de duración */
+.cookiesTable td:nth-child(3) {
+    width: 20%; /* Ancho de 20% para la duración */
+}
+
+.cookiesTable th:nth-child(4), /* Columna de plataforma */
+.cookiesTable td:nth-child(4) {
+    width: 20%; /* Ancho de 20% para la plataforma */
+}
+
+.cookiesTable th:nth-child(5), /* Columna de finalidad */
+.cookiesTable td:nth-child(5) {
+    width: 20%; /* Ancho de 20% para la finalidad */
+}
+
+.cookiesTable th:nth-child(6), /* Columna de acciones */
+.cookiesTable td:nth-child(6) {
+    width: 10%; /* Ancho de 10% para las acciones */
+}
+  
+.editBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--verdeApp);
+    font-size: 16px;
+}
+  
+.pagination {
+    text-align: center;
+}
+  
+.paginationBtn {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    background-color: white;
+    cursor: pointer;
+}
+  
+.paginationBtn.active {
+    background-color: var(--verdeApp);
+    color: white;
+    border: none;
+}
+
+.serch_delete {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px; /* Espaciado entre el campo y el botón */
+}
+
+.text-input {
+    flex-grow: 1; /* Permite que el contenedor del campo de texto ocupe más espacio */
+}
+
+.deleteBtn {
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.deleteBtn:hover {
+    background: #e0e0e0;
+}

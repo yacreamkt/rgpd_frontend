@@ -1,0 +1,64 @@
+.field-text-format {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.field-text-format.row {
+  flex-direction: row;
+  align-items: center;
+  
+}
+
+.field-text-format.row .enunciado {
+  min-width: 120px;
+  margin-right: 10px;
+  text-align: right;
+}
+
+
+.field-text-format.column .enunciado {
+  margin-bottom: 5px;
+}
+
+.text-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+  
+.row {
+  flex-direction: row;
+  align-items: center;
+}
+  
+.column {
+  flex-direction: column;
+}
+  
+.text-input{
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 80%;
+  outline: none;
+}
+
+.rigth{
+  font-size: 15px;
+  color: gray;
+
+}
+
+.center {
+  text-align: right;
+  flex: 1;
+  min-width: 30%;
+  font-size: 15px;
+  color: gray;
+}

@@ -1,0 +1,183 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 150px;
+}
+  
+  /* Estilos para el contenedor de los dos <h2> */
+.container_header {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+}
+  
+  /* Contenedor para los dominios */
+.container-documents {
+    overflow-x: auto; /* Habilita el scroll horizontal */
+    white-space: nowrap; /* Asegura que las celdas no se rompan en varias líneas */
+    display: block; /* Evita que los estilos de tabla interfieran */
+  
+    background-color: white;
+    padding: 170px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    overflow: hidden;
+}
+
+.content-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menuItem {
+  padding: 15px 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.menuItem:hover {
+  background-color: #f0f0f0;
+  color: var(--verdeApp);
+}
+
+.menuItem.active {
+  background-color: var(--fondo);
+  color: var(--verdeApp);
+}
+
+.menuHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggleIcon {
+  margin-right: 10px;
+}
+
+.submenu {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.submenuItem {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.submenuIcon {
+  font-size: 1rem;
+  color: #d32f2f;
+}
+
+
+/*  */
+
+/* Main content */
+.mainContent {
+  width: 55%;
+  padding: 20px;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.content h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.content p, .content ul {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.content ul {
+  padding-left: 20px;
+}
+
+.content ul li {
+  list-style: disc;
+  margin-bottom: 5px;
+}
+
+/* Modelo PDF */
+.model {
+  width: 25%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-left: 1px solid #ddd;
+}
+
+.model h4 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.pdfCard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.pdfIcon {
+  font-size: 2rem;
+  color: #d32f2f;
+}
+
+.downloadButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.downloadButton:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar,
+  .mainContent,
+  .model {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .container-documents {
+    flex-direction: column;
+  }
+}

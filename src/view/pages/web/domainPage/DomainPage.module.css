@@ -1,0 +1,168 @@
+/* Contenedor principal que envuelve todo */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 150px;
+}
+
+/* Estilos para el contenedor de los dos <h2> */
+.container_header {
+  display: flex;
+  justify-content: space-between; 
+  width: 100%; 
+}
+
+/* Contenedor para los dominios */
+.container-dominios {
+  overflow-x: auto; /* Habilita el scroll horizontal */
+  white-space: nowrap; /* Asegura que las celdas no se rompan en varias líneas */
+  display: block; /* Evita que los estilos de tabla interfieran */
+
+  background-color: white;
+  padding: 10px; /* Ajuste para evitar espacio innecesario */
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  /* Elimina el overflow general que está bloqueando el scroll horizontal */
+  overflow: auto; 
+}
+
+/* Título de la sección */
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Botón de agregar nueva web */
+.deleteButton {
+  display: inline-block;
+  margin: 23px 0;
+  padding: 10px 20px;
+  background-color:  var(--verdeApp); /* Color rojo similar a la imagen */
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+}
+
+.deleteButton:hover {
+  background-color: var(--verdeApp2);
+}
+
+.backButton{
+  display: inline-block;
+  margin: 23px 5px;
+  padding: 10px 10px;
+  background-color: rgba(50, 134, 50, 0.116);
+  color: var(--verdeApp);;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+}
+
+.backButton:hover {
+  background-color: rgba(50, 134, 50, 0.253);
+}
+
+/* Primera fila: Logo e iconos en columnas */
+.header__row__webMenu.header__top {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+  padding: 0 80px;
+  height: 60px; /* Ajusta la altura de la fila */
+}
+
+
+/* Estilo para las filas */
+.header__row__webMenu {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #f5f5f7;  /* background tambien  */
+}
+
+.header__row__webMenu.header__bottom{
+  padding: 0 80px;
+}
+
+.header__row__webMenu.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 60px;
+}
+
+.header__webmenu__nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Elementos del menú */
+.header__webmenu__nav li {
+  font-size: 15px; /* Tamaño de fuente por defecto */
+  font-weight: 500;
+  cursor: pointer;
+  padding: 10px 10px 25px 13px;
+}
+
+/* Estilo para el ítem activo */
+.header__webmenu__nav li.active {
+  color: var(--verdeApp);
+  border-bottom: 2px solid var(--verdeApp);
+}
+
+  /* Estilo para los elementos del menú */
+  .header__webmenu__nav li {
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #555;
+    padding: 10px 10px; /* Ajusta según el diseño */
+    /* border-bottom: 1px solid #eee; Línea de separación (opcional) */
+  }
+  
+  /* Estilo adicional para elementos activos */
+  .header__webmenu__nav li.active {
+    color: var(--verdeApp);
+    border-bottom: 2px solid var(--verdeApp);
+    background-color: var(--fondo);
+  }
+
+.name_back{
+  display: flex;
+}
+  
+@media (max-width: 750px) {
+  .title {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .deleteButton {
+    display: inline-block;
+    margin: 12px 0px;
+    padding: 0px 3px;
+    background-color:  var(--verdeApp); /* Color rojo similar a la imagen */
+  }
+
+  .container {
+    padding: 40px 30px;
+  }
+
+  .container-dominios {
+    padding: 5px;
+  }
+}

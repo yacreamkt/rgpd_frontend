@@ -1,0 +1,111 @@
+/* Fondo de superposición */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Contenedor principal del popup */
+  .popup {
+    margin-bottom: 100px;
+    background: white;
+    border-radius: 8px;
+    width: 500px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  /* Encabezado con fondo rojo */
+  .header {
+    background-color: var(--verdeApp);
+    color: white;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header h2 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .closeButton {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Cuerpo del popup */
+  .body {
+    padding: 40px;
+  }
+  
+  .label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: block;
+    color: #333;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 8px;
+  }
+  
+  /* Contenedor de los botones */
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 16px;
+    background-color: var(--fondo);;
+  }
+  
+  /* Botón de cancelar */
+  .cancelButton {
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .cancelButton:hover {
+    background: #e0e0e0;
+  }
+  
+  /* Botón de añadir */
+  .addButton {
+    background: var(--verdeApp);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .addButton:hover {
+    background: var(--verdeApp2);
+  }
+
+.error{
+  font-size: 12px;
+  color: red;
+}

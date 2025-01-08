@@ -1,0 +1,31 @@
+[
+    {
+      "subtitulo": "¿En qué consiste?",
+      "content": "El contrato de confidencialidad se refiere a la obligación que tienen los empleados de guardar secreto de todas las actuaciones que realicen en la empresa y la prohibición de revelar la información sobre los datos tratados tanto de los clientes, como de los demás trabajadores, en definitiva, de toda la información que utilizan."
+    },
+    {
+      "subtitulo": "¿Para qué sirve?",
+      "content": "Sus finalidades son proteger toda la información que manejan tus empleados en el ejercicio de sus funciones, su compromiso a cumplir con las reglas específicas de tu empresa y no divulgar los datos con los que tratan."
+    },
+    {
+      "subtitulo": "¿Quién debe firmarlo?",
+      "content": "Deben firmar el contrato de confidencialidad todos tus empleados, incluidos los trabajadores temporales y los trabajadores en prácticas."
+    },
+    {
+      "subtitulo": "¿Y si el empleado se niega a firmarlo?",
+      "content": "Si tu empleado se niega a firmar el documento, debes saber que no estás cumpliendo con las medidas de seguridad que establece el RGPD y la LOPD y que cualquier incidencia con los datos de algún cliente te podría conllevar a una sanción por parte de la AEPD."
+    },
+    {
+      "subtitulo": "¿Dónde debo guardarlo?",
+      "content": "Debes almacenarlo en un lugar seguro, en el cual solo se tenga acceso por personal autorizado y siempre debes tenerlos localizados. Esto es muy importante ya que uno de los documentos que solicitarán los agentes de la AEPD en caso de una inspección será este."
+    },
+    {
+      "subtitulo": "¿Se pueden guardar copias?",
+      "content": "Si, de hecho, es una práctica muy recomendable, ya que en el caso de que se produzca una pérdida del documento original se dispondría de una copia con la cual hacer frente a las solicitudes de documentación por parte de la AEPD."
+    },
+    {
+      "subtitulo": "¿Se pueden almacenar en formato electrónico?",
+      "content": "Por supuesto, si te es más cómodo, puedes escanear el original y luego destruirlo y así lo mantendrás en formato electrónico y con ello ganarás mucho espacio. Recuerda siempre disponer de una copia de seguridad actualizada con todos tus documentos y archivos."
+    }
+  ]
+  

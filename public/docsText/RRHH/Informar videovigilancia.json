@@ -1,0 +1,23 @@
+[
+    {
+      "subtitulo": "¿Se pueden instalar cámaras con la finalidad de control empresarial?",
+      "content": "El Estatuto de los Trabajadores faculta al empresario para adoptar las medidas que estime más oportunas para verificar el cumplimiento por el trabajador de sus obligaciones y deberes laborales, que deberán guardar la consideración debida a la dignidad humana y tener en cuenta la capacidad real de los trabajadores con discapacidad. En este sentido, los sistemas de videovigilancia para control empresarial sólo se adoptarán cuando exista una relación de proporcionalidad entre la finalidad perseguida y el modo en que se traten las imágenes y no haya otra medida más idónea. Asimismo, se deberá informar personalmente a los trabajadores, o en su caso, a través de la representación sindical, por cualquier medio que garantice la recepción de la información."
+    },
+    {
+      "subtitulo": "¿Se puede grabar la vía pública con fines de seguridad?",
+      "content": "La captación y grabación de imágenes de la vía pública con fines de seguridad es una función reservada a las Fuerzas y Cuerpos de Seguridad. Únicamente se permitirá la grabación de aquel espacio de la vía pública que resulte imprescindible para la finalidad que se pretende, o resulte imposible evitarlo por razón de la ubicación de las cámaras. En todo caso, deberá evitarse cualquier tratamiento de datos innecesario para la finalidad perseguida."
+    },
+    {
+      "subtitulo": "¿Quién puede ver las grabaciones de cámaras de seguridad?",
+      "content": "El acceso a las imágenes grabadas debe estar protegido por un usuario y contraseña de forma que sólo las personas autorizadas puedan acceder a las mismas. El responsable del tratamiento designará a las personas concretas que tendrán acceso a esas imágenes que costarán como usuarios autorizados en el documento de seguridad y serán informados de sus respectivas obligaciones. Normalmente será personal de empresas de seguridad contratadas o trabajadores de esa empresa a los que se les asigne específicamente esa función. En caso de Comunidades de propietarios, deberá designarse a la persona o personas autorizadas ya que el acceso por todos los vecinos a las imágenes resulta desproporcionado, según la LOPD. Las Fuerzas y Cuerpos de Seguridad pueden tener acceso a las grabaciones en la prevención de actos delictivos, la protección de las personas y la conservación y salvaguarda de bienes que estén en situación de peligro."
+    },
+    {
+      "subtitulo": "¿Cuánto tiempo se guardan las grabaciones?",
+      "content": "Se podrán almacenar las grabaciones por un máximo de 30 días. En el caso de que se trate de una entidad de crédito, solo podrá almacenarlas 15 días."
+    },
+    {
+      "subtitulo": "Excepción",
+      "content": "No se podrán eliminar las grabaciones en el caso de que las mismas hayan sido requeridas por la autoridad judicial en el marco de una investigación. En este caso, una vez pasado los 30 días deberemos almacenarlas en un lugar en el que solo personal autorizado tenga acceso y no se podrá guardar copia una vez que hayan sido recogidas por las Fuerzas y Cuerpos de Seguridad del Estado."
+    }
+  ]
+  

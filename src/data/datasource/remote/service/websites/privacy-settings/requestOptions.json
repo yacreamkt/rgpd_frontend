@@ -1,0 +1,53 @@
+{
+  "purposes": [
+    {
+      "ask": "Cumplir obligaciones comerciales, laborales y contables.",
+      "is_active": false
+    },
+    {
+      "ask": "Prestar los servicios contratados.",
+      "is_active": false
+    },
+        {
+      "ask": "Enviar información comercial.",
+      "is_active": false
+    },
+        {
+      "ask": "Administración de proveedores y contratistas.",
+      "is_active": false
+    },
+    {
+      "ask": "Archivo, actualización y protección de las bases de datos.",
+      "is_active": false
+    },
+        {
+      "ask": "Cesiones a terceros para fines comerciales, contractuales, administrativos, de mercadeo y/o operativos.",
+      "is_active": false
+    },
+    {
+      "ask": "Con propósitos de seguridad o prevención de fraude.",
+      "is_active": false
+    },
+        {
+      "ask": "Ejecutar un contrato suscrito a distancia con el usuario.",
+      "is_active": false
+    },
+    {
+      "ask": "Adquirir los productos ofrecidos a través de la página web.",
+      "is_active": false
+    },
+        {
+      "ask": "Prestar los servicios contratados por el usuario.",
+      "is_active": false
+    },
+    {
+      "ask": "Enviar información promocional vía electrónica.",
+      "is_active": false
+    },
+    {
+      "ask": "Facilitar la información solicitada por el usuario a través del formulario de contacto.",
+      "is_active": false
+    }
+  ],
+  "additional_settings": ""
+}
