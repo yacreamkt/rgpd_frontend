@@ -1,0 +1,28 @@
+[
+    {
+      "subtitulo": "¿Qué son los derechos ARCO?",
+      "content": "Son el conjunto de acciones a través de las cuales una persona física puede ejercer el control sobre sus datos personales."
+    },
+    {
+      "subtitulo": "¿Qué es el derecho a no ser objeto de decisiones individuales automatizadas?",
+      "content": "Se trata del derecho que tiene el interesado o afectado, a no ser objeto de una decisión individual, adoptada por el Responsable del Tratamiento, que se haya tomado sin intervención humana (a través de medios automatizados), y que sea susceptible de producir efectos jurídicos que le afecten de forma significativa. Las decisiones individuales automatizadas, incluirían también la elaboración de perfiles."
+    },
+    {
+      "subtitulo": "¿De cuánto plazo dispongo para contestar al afectado?",
+      "content": "Deberás resolver sobre la solicitud de rectificación en el plazo de un mes, a contar desde la recepción de la solicitud."
+    },
+    {
+      "subtitulo": "¿Puedo denegar el derecho?",
+      "content": "Sí, siempre haciéndolo constar por escrito al interesado."
+    },
+    {
+      "subtitulo": "¿Por qué motivos puedo denegarlo?",
+      "content": [
+        "Se puede denegar este derecho al interesado, si la decisión individual:",
+        "a) Es necesaria para la celebración o la ejecución de un contrato entre el interesado y un responsable del tratamiento.",
+        "b) Está autorizada por el Derecho de la Unión o de los Estados miembros que se aplique al responsable del tratamiento y que establezca asimismo medidas adecuadas para salvaguardar los derechos y libertades y los intereses legítimos del interesado.",
+        "c) Se basa en el consentimiento explícito del interesado."
+      ]
+    }
+]
+  

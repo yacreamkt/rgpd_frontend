@@ -83,7 +83,7 @@ function WebPages({ onNavigate }) {
                   <tr key={website.id}>
                     <td
                       className={styles['new-web']}
-                      onClick={() => onNavigate('domain', website.domain, website.id)}
+                      onClick={() => onNavigate('domain', website.domain, website.id, null)}
                     >
                       <div className={styles['texto-dominio']}>{website.domain}</div>
                     </td>

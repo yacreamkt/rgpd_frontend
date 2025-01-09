@@ -1,0 +1,40 @@
+[
+    {
+      "subtitulo": "¿Qué son los derechos ARCO?",
+      "content": "Son el conjunto de acciones a través de las cuales una persona física puede ejercer el control sobre sus datos personales."
+    },
+    {
+      "subtitulo": "¿Qué es el derecho a la portabilidad?",
+      "content": "Es el derecho del interesado para trasladar, copiar o transmitir datos personales de un entorno informático a otro."
+    },
+    {
+      "subtitulo": "¿La portabilidad lleva aparejada la supresión de los datos?",
+      "content": "No. La portabilidad no conlleva la supresión automática de los datos."
+    },
+    {
+      "subtitulo": "¿Qué datos se deben incluir?",
+      "content": [
+        "",
+        "Los datos personales del interesado.",
+        "Los datos que se hayan facilitado al responsable del tratamiento.",
+        "Los datos otorgados en el desarrollo de la actividad y del uso del servicio."
+      ]
+    },
+    {
+      "subtitulo": "¿De cuánto plazo dispongo para contestar al afectado?",
+      "content": "Deberás resolver sobre la solicitud de portabilidad sin dilación indebida en el plazo de un mes desde la recepción de la solicitud. Cuando los casos sean complejos el tiempo máximo puede ampliarse a tres meses, previa información del motivo al interesado dentro del primer mes desde su solicitud."
+    },
+    {
+      "subtitulo": "¿Puedo denegar el derecho?",
+      "content": "Sí, pero deberás motivarlo."
+    },
+    {
+      "subtitulo": "¿Por qué motivos puedo denegarlo?",
+      "content": "Cuando la portabilidad de los datos de un responsable de tratamiento a otro impida a un tercero ejercer sus derechos ARCO."
+    },
+    {
+      "subtitulo": "¿Se puede cobrar un canon por realizar la portabilidad?",
+      "content": "No, el reglamento europeo prohíbe expresamente cobrar un canon por facilitar los datos personales, salvo que se pueda demostrar que son solicitudes excesivas."
+    }
+  ]
+  

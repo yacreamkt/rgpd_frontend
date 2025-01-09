@@ -15,6 +15,7 @@ function CaracteristicasPage({ domai, id }) {
     useEffect(() => {
         const fetchData = async () => {
             try {
+                console.log("ID:", id);
                 const response = await getCharacteristicsId(id); // Obtener datos del servidor
                 setFormData(response.datos.configuration); // Inicializar formData con la configuración
                 setLoading(false); // Desactivar el indicador de carga

@@ -18,9 +18,16 @@ body {
   /* font-family: 'Arial', sans-serif; */
   /* font-family: monospace; */
   /* font-family: cursive; */
+  font-size: 12px;
 }
 
 ::selection {
   background-color: var(--verdeApp); /* Fondo del texto resaltado */
   color: #ffffff; /* Color del texto dentro del fondo seleccionado */
 }
+
+/* @media (max-width: 780px ){
+  body{
+    font-size: 10px;
+  }
+} */

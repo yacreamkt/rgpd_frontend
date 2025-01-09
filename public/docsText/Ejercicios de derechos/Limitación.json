@@ -1,0 +1,40 @@
+[
+    {
+      "subtitulo": "¿Qué son los derechos ARCO?",
+      "content": "Son el conjunto de acciones a través de las cuales una persona física puede ejercer el control sobre sus datos personales."
+    },
+    {
+      "subtitulo": "¿Qué es el derecho de limitación?",
+      "content": "El derecho a la limitación del dato personal establece un derecho a que los datos sean marcados de tal manera que se evite por parte del responsable un tratamiento en un futuro."
+    },
+    {
+      "subtitulo": "¿El afectado necesita justificarlo?",
+      "content": "Sí, el afectado deberá indicar la concurrencia de motivos fundados y legítimos relativos a su concreta situación personal."
+    },
+    {
+      "subtitulo": "¿En qué situaciones puede darse una limitación al tratamiento?",
+      "content": [
+        "",
+        "Impugnación de exactitud de datos, durante el plazo que se permite al responsable verificar la misma.",
+        "Tratamientos ilícitos en los que el interesado se opone a la supresión.",
+        "Los datos ya no son necesarios para la finalidad del tratamiento, pero el interesado los necesita para la formulación, el ejercicio o la defensa de reclamaciones."
+      ]
+    },
+    {
+      "subtitulo": "¿De cuánto plazo dispongo para contestar al afectado?",
+      "content": "Deberás resolver sobre la solicitud de limitación en el plazo máximo de un mes."
+    },
+    {
+      "subtitulo": "¿Cuándo tengo que hacer efectivo el derecho?",
+      "content": "Deberá hacerse efectiva inmediatamente posterior a la contestación al afectado, si esta es afirmativa."
+    },
+    {
+      "subtitulo": "¿Puedo denegar el derecho?",
+      "content": "Sí, pero deberás motivarlo e indicar que cabe invocar la tutela de la AEPD."
+    },
+    {
+      "subtitulo": "¿Por qué motivos puedo denegarlo?",
+      "content": "El principal y único motivo de denegación de este derecho es que a la vista de la documentación aportada no se encuentre fundamento para proceder con la limitación de los datos del afectado."
+    }
+  ]
+  

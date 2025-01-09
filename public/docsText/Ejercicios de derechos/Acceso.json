@@ -1,0 +1,31 @@
+[
+    {
+      "subtitulo": "¿Qué son los derechos ARCO?",
+      "content": "Son el conjunto de acciones a través de las cuales una persona física puede ejercer el control sobre sus datos personales."
+    },
+    {
+      "subtitulo": "¿Qué es el derecho de acceso?",
+      "content": "Es el derecho del afectado a obtener información sobre si sus propios datos de carácter personal están siendo objeto de tratamiento, la finalidad del tratamiento que en su caso se esté realizando, así como la información disponible sobre el origen de dichos datos y las comunicaciones realizadas o previstas de los mismos."
+    },
+    {
+      "subtitulo": "¿El afectado necesita justificarlo?",
+      "content": "No, salvo si se ha ejercitado el derecho en los últimos doce meses."
+    },
+    {
+      "subtitulo": "¿De cuánto plazo dispongo para constestar al afectado?",
+      "content": "Deberás resolver sobre la solicitud de acceso en el plazo máximo de un mes a contar desde la recepción de la solicitud."
+    },
+    {
+      "subtitulo": "¿Cuándo tengo que hacer efectivo el derecho?",
+      "content": "El acceso podrá hacerse efectivo durante un mes tras la comunicación de la resolución."
+    },
+    {
+      "subtitulo": "¿Puedo denegar el derecho?",
+      "content": "Sí, pero deberás motivarlo e indicar que cabe invocar la tutela de la AEPD."
+    },
+    {
+      "subtitulo": "¿Por qué motivos puedo denegarlo?",
+      "content": "Son motivos de denegación que el derecho ya se haya ejercitado en los doce meses anteriores a la solicitud (salvo que se acredite un interés legítimo al efecto) y que así lo prevea una Ley o una norma de derecho comunitario de aplicación directa o cuando éstas impidan al responsable del tratamiento revelar a los afectados el tratamiento de sus datos."
+    }
+]
+  

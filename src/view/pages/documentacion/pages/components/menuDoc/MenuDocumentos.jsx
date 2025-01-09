@@ -3,7 +3,7 @@ import styles from '../../PaginasDomumentos.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 
-function MenuDocumentos({ menuItems, onDocumentSelect }) {
+function MenuDocumentos({ menuItems, onDocumentSelect, onNavigate }) {
   const [activeItem, setActiveItem] = useState(null); // Elemento seleccionado
   const [expandedItem, setExpandedItem] = useState(null); // Elemento con submenú desplegado
 
@@ -16,9 +16,14 @@ function MenuDocumentos({ menuItems, onDocumentSelect }) {
     onDocumentSelect(title, subitem); // Llama a la función pasada desde el padre
   };
 
+  const handleNavigation = (back) => {
+    onNavigate(back, null, null, null);
+  }
+
   return (
     <div className={styles.sidebar}>
-      <p className={styles.backLink}>← Centro de Documentación</p>
+      {/* ⬅ */}
+      <p className={styles.backLink} onClick={() => handleNavigation("documentacion")} >◀️ Centro de Documentación</p> 
       <ul>
         {menuItems.map((item) => (
           <li

@@ -22,7 +22,7 @@ function DomainPage({ domain, onNavigate, domainId }) {
 
     const handleDomainDeleted = () => {
         setIsPopupOpen(false);
-        onNavigate('web');
+        onNavigate('web', null, null, null);
     };
 
     const renderContent = () => {

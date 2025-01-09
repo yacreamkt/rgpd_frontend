@@ -34,15 +34,28 @@ function InfoDocumentos({ title, subitems }) {
           {documentData.map((item, index) => (
             <div key={index}>
               <h3>{item.subtitulo}</h3>
-              {Array.isArray(item.content) ? (
-                <ul>
-                  {item.content.map((listItem, idx) => (
-                    <li key={idx}>{listItem}</li>
-                  ))}
-                </ul>
-              ) : (
-                <p>{item.content}</p>
-              )}
+
+              {/* Caso 1: content es un string */}
+              {/* Caso 2: content es un array con posible texto + lista */}
+              {typeof item.content === 'string' ? (
+                <p className={styles['info-page']}>{item.content}</p>
+              ) : Array.isArray(item.content) ? (
+                <>
+                  {/* Si es un array y tiene al menos 1 elemento */}
+                  {item.content.length > 0 && (
+                    <p className={styles['info-page']}>{item.content[0]}</p>
+                  )}
+
+                  {/* Si hay más de un elemento, interpretamos los siguientes como ítems de lista */}
+                  {item.content.length > 1 && (
+                    <ul>
+                      {item.content.slice(1).map((listItem, idx) => (
+                        <li key={idx}>{listItem}</li>
+                      ))}
+                    </ul>
+                  )}
+                </>
+              ) : null}
             </div>
           ))}
         </div>

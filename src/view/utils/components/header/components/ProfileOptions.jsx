@@ -12,7 +12,7 @@ const ProfileOptions = ({ onLogout, clientId, organizationName, onNavigate }) =>
 
   const handleNavigation = (destination) => {
     setIsOpen(false);
-    onNavigate(destination); // Navega a la página correspondiente
+    onNavigate(destination, null, null, null); // Navega a la página correspondiente
   };
 
   return (

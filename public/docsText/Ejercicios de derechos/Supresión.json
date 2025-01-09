@@ -1,0 +1,31 @@
+[
+    {
+      "subtitulo": "¿Qué son los derechos ARCO?",
+      "content": "Son el conjunto de acciones a través de las cuales una persona física puede ejercer el control sobre sus datos personales."
+    },
+    {
+      "subtitulo": "¿Qué es el derecho de supresión?",
+      "content": "Es el derecho del afectado a que se supriman los datos que resulten ser inadecuados o excesivos."
+    },
+    {
+      "subtitulo": "¿El afectado necesita justificarlo?",
+      "content": "Sí, debe indicarse el dato a cancelar y la causa que lo justifica, aportando documentación."
+    },
+    {
+      "subtitulo": "¿De cuánto plazo dispongo para contestar al afectado?",
+      "content": "Deberás resolver sobre la solicitud de supresión en el plazo máximo de un mes."
+    },
+    {
+      "subtitulo": "¿Cuándo tengo que hacer efectivo el derecho?",
+      "content": "La supresión deberá hacerse efectiva inmediatamente posterior a la contestación al afectado, si esta es afirmativa."
+    },
+    {
+      "subtitulo": "¿Puedo denegar el derecho?",
+      "content": "Sí, pero deberás motivarlo e indicar que cabe invocar la tutela de la AEPD."
+    },
+    {
+      "subtitulo": "¿Por qué motivos puedo denegarlo?",
+      "content": "La supresión no procederá cuando los datos de carácter personal deban ser conservados durante los plazos previstos en las disposiciones aplicables o, en su caso, en las relaciones contractuales entre la persona o entidad responsable del tratamiento y el interesado que justificaron el tratamiento de los datos."
+    }
+  ]
+  

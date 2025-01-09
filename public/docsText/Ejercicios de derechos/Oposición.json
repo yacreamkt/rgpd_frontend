@@ -1,0 +1,27 @@
+[
+    {
+      "subtitulo": "¿Qué son los derechos ARCO?",
+      "content": "Son el conjunto de acciones a través de las cuales una persona física puede ejercer el control sobre sus datos personales."
+    },
+    {
+      "subtitulo": "¿Qué es el derecho de oposición?",
+      "content": "Es el derecho del afectado a oponerse a que sus datos sean tratados conforme al interés público o interés legítimo."
+    },
+    {
+      "subtitulo": "¿Estoy obligado a dejar de tratar esos datos personales tras la solicitud?",
+      "content": "Sí. El responsable del tratamiento está obligado a dejar de tratar los datos personales desde el momento de oposición del interesado."
+    },
+    {
+      "subtitulo": "¿En qué plazo se debe solicitar por el interesado?",
+      "content": "El interesado debe expresar claramente que quiere ejercer este derecho en la primera comunicación o incluso antes. Si se tratan datos personales con objeto de mercadotecnia directa, el interesado puede oponerse en cualquier momento y dejarán de ser tratados para estos fines."
+    },
+    {
+      "subtitulo": "¿Puedo denegar el derecho?",
+      "content": "Sí, pero deberás motivarlo."
+    },
+    {
+      "subtitulo": "¿Por qué motivos puedo denegarlo?",
+      "content": "Cuando haya motivos legítimos para tratar esos datos y que dichos motivos prevalezcan sobre los intereses, derechos y libertades del interesado, y para el ejercicio o defensa de reclamaciones."
+    }
+]
+  

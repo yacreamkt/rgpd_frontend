@@ -1,0 +1,31 @@
+[
+    {
+      "subtitulo": "¿Qué son los derechos ARCO?",
+      "content": "Son el conjunto de acciones a través de las cuales una persona física puede ejercer el control sobre sus datos personales."
+    },
+    {
+      "subtitulo": "¿Qué es el derecho de rectificación?",
+      "content": "Es el derecho del afectado a que se modifiquen los datos que resulten ser inexactos o incompletos."
+    },
+    {
+      "subtitulo": "¿El afectado necesita justificarlo?",
+      "content": "Sí, debe indicarse a qué datos se refiere y la corrección que haya de realizarse aportando documentación."
+    },
+    {
+      "subtitulo": "¿De cuánto plazo dispongo para contestar al afectado?",
+      "content": "Deberás resolver sobre la solicitud de rectificación en el plazo máximo de un mes."
+    },
+    {
+      "subtitulo": "¿Cuándo tengo que hacer efectivo el derecho?",
+      "content": "La rectificación deberá hacerse efectiva inmediatamente posterior a la contestación al afectado, si esta es afirmativa."
+    },
+    {
+      "subtitulo": "¿Puedo denegar el derecho?",
+      "content": "Sí, pero deberás motivarlo e indicar que cabe invocar la tutela de la AEPD."
+    },
+    {
+      "subtitulo": "¿Por qué motivos puedo denegarlo?",
+      "content": "El principal y único motivo de denegación de este derecho es que a la vista de la documentación aportada no se encuentre fundamento para proceder con la rectificación."
+    }
+]
+  

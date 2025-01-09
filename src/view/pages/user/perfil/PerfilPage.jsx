@@ -9,7 +9,7 @@ function PerfilPage({ onNavigate }) {
   const [telefono, setTelefono] = useState("613041111");
 
   const handleNavigation = (destination) => {
-    onNavigate(destination); // Navega a la página correspondiente
+    onNavigate(destination, null, null, null); // Navega a la página correspondiente
   };
 
   return (

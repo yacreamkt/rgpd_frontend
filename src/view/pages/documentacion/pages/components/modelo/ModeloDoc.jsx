@@ -1,33 +1,62 @@
-// import React, { useState } from "react";
-import styles from '../../PaginasDomumentos.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
+import React, { useState } from "react";
+import styles from "../../PaginasDomumentos.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
+import PopUpDocument from "../../../components/popUp/PopUpDocument";
 
-function ModeloDoc ({ onNavigate, formData }) {
+function ModeloDoc({ selectedSubsection, title }) {
+  const { name, documents } = selectedSubsection;
+  
+  // Manejo del popup
+  const [showPopup, setShowPopup] = useState(false);
+  const [selectedDoc, setSelectedDoc] = useState(null);
+
+  // Función para abrir el popup y setear el doc seleccionado
+  const handleShowPopup = (doc) => {
+    setSelectedDoc(doc);
+    setShowPopup(true);
+  };
+
+  // Función para cerrar el popup
+  const handleClosePopup = () => {
+    setSelectedDoc(null);
+    setShowPopup(false);
+  };
+
   return (
-    <>
-          {/* Modelo PDF */}
-          <div className={styles.model}>
-            <h4>Modelo</h4>
-            <div className={styles.pdfCard}>
-              <FontAwesomeIcon icon={faFilePdf} className={styles.pdfIcon} />
-              <div>
-                <h5>Cláusula información - Contrato</h5>
-                <button className={styles.downloadButton}>Descargar PDF</button>
-              </div>
+    <div className={styles.model}>
+      <h4>{name}</h4>
+      {documents && documents.length > 0 ? (
+        documents.map((doc) => (
+          <div className={styles.pdfCard} key={doc.id}>
+            <FontAwesomeIcon icon={faFilePdf} className={styles.pdfIcon} />
+            <div>
+              <h5>{doc.title}</h5>
+              
+              {/* Botón que muestra el popup con el documento seleccionado */}
+              <button
+                onClick={() => handleShowPopup(doc)}
+                className={styles.downloadButton}
+              >
+                Mostrar Documento
+              </button>
             </div>
-            <div className={styles.pdfCard}>
-              <FontAwesomeIcon icon={faFilePdf} className={styles.pdfIcon} />
-              <div>
-                <h5>Cláusula información - Contrato (Versión inglés)</h5>
-                <button className={styles.downloadButton}>Descargar PDF</button>
-              </div>
-            </div>
-            <p>
-              Si tienes cualquier duda sobre este documento, <p>contacta con tu abogado</p>.
-            </p>
           </div>
-    </>
+        ))
+      ) : (
+        <p>No hay documentos disponibles para esta categoría.</p>
+      )}
+
+      {/* Renderiza el popup solo cuando haya un documento seleccionado */}
+      {showPopup && selectedDoc && (
+        <PopUpDocument
+          sectionName={title}            // o si deseas: selectedSubsection.name
+          documentTitle={selectedDoc.title}
+          fileUrl={selectedDoc.file_url}
+          onClose={handleClosePopup}
+        />
+      )}
+    </div>
   );
 }
 

@@ -19,7 +19,7 @@ function OrganPage({ onNavigate }) {
   const [profesion, setProfesion] = useState("No"); // Maneja "Sí" o "No"
 
   const handleNavigation = (destination) => {
-    onNavigate(destination); // Navega a la página correspondiente
+    onNavigate(destination, null, null, null); // Navega a la página correspondiente
   };
 
   return (

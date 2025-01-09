@@ -1,0 +1,27 @@
+[
+    {
+      "subtitulo": "¿En qué consiste?",
+      "content": "Se trata de un documento..."
+    },
+    {
+      "subtitulo": "¿Para qué sirve?",
+      "content": [
+        "Su finalidad es informar al cliente de todos los puntos...",
+        "Datos del responsable de tratamiento",
+        "Finalidad del tratamiento",
+        "Legitimación del tratamiento",
+        "Destinatarios de los datos",
+        "Derechos de los afectados",
+        "Compromiso de confidencialidad"
+      ]
+    },
+    {
+      "subtitulo": "¿Dónde debo incluirlo?",
+      "content": [
+        "Aquí nos encontramos con dos opciones:",
+        "En el contrato de prestación de servicios...",
+        "Si no firmamos ningún contrato..."
+      ]
+    }
+  ]
+  
