@@ -6,7 +6,7 @@ import FieldTextFormat from '../../../../../utils/components/fieldtextformat/Fie
 import { getPrivacySettings, patchPrivacySettings  } from "../../../../../../data/datasource/remote/service/websites/privacy-settings/HandlesDomain";
 import LoadingPage from '../../../../../utils/components/loadingpage/LoadingPage';
 
-function PrivacidadPage({id}) {
+function PrivacidadPage({id, setActiveContent}) {
   const [text, setText] = useState(""); // Para almacenar texto adicional
   const [purposes, setPurposes] = useState([]); // Estado dinámico para preguntas
   const [loading, setLoading] = useState(true); // Indicador de carga
@@ -52,6 +52,7 @@ function PrivacidadPage({id}) {
     try {
       await patchPrivacySettings(id, payload);
       alert("Privacidad actualizadas correctamente.");
+      setActiveContent('Textos legales');
     } catch (error) {
       console.error("Error al guardar configuraciones:", error);
       alert("Error al guardar las configuraciones.");
@@ -89,7 +90,10 @@ function PrivacidadPage({id}) {
               <p className={styles['parrafo-preguntas']}>
                 Señalar el motivo por el que se van a tratar los datos personales de los usuarios en la página web:
               </p>
-              <CheckList purposes={purposes} onCheckboxChange={handleCheckboxChange} />
+              <CheckList 
+                purposes={purposes} 
+                onCheckboxChange={handleCheckboxChange} 
+              />
               <FieldTextFormat
                 label="Otras finalidades:"
                 value={text}

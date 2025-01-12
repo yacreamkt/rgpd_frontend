@@ -4,10 +4,11 @@ import SaveButton from '../../../../../utils/components/savebutton/ButtonSave'
 import QuestionsFormat from '../../../../../utils/components/radiobuttonformat/RadioButtonFormat'
 import CookiesTable from "./components/table/CookiesTable";
 
-function CookiesPage() {
+function CookiesPage({ setActiveContent }) {
 
   const handleSaveButton = () => {
     console.log("Guardado:");
+    setActiveContent('Textos legales');
   };
 
   return (

@@ -6,10 +6,10 @@ import QuestionsFormat from '../../../../../utils/components/radiobuttonformat/R
 import CheckBoxFormat from '../../../../../utils/components/checkboxform/CheckBoxFormat'
 import FieldTextFormat from '../../../../../utils/components/fieldtextformat/FieldTextFormat'
 import LoadingPage from '../../../../../utils/components/loadingpage/LoadingPage';
-import classNames from 'classnames';
 
-function CCPage({ id, setActiveContent }) {
+function CCPage({id, setActiveContent }) {
     const [formData, setFormData] = useState(null);
+    // const [purposes, setPurposes] = useState([]);
     const [loading, setLoading] = useState(true);
 
     // Cargar datos al montar el componente
@@ -28,23 +28,6 @@ function CCPage({ id, setActiveContent }) {
       fetchData();
   }, [id]);
 
-  // Manejar cambios en los checkboxes comercio_electronico
-  const handleCheckboxChange = (form, ask, isSelected) => {
-    try {
-    setFormData((prev) => ({
-        ...prev,
-        [form]: {
-            ...prev[form],
-            purposes: prev[form].purposes.map((purpose) =>
-                purpose.ask === ask ? { ...purpose, is_active: isSelected } : purpose
-            ),
-        },
-      }));
-    } catch (error) {
-      alert("Error al guardar los datos");
-    }
-  };
-
   const handleQuestionChange = (section, field, value) => {
     setFormData((prev) => ({
         ...prev,
@@ -54,33 +37,53 @@ function CCPage({ id, setActiveContent }) {
         },
     }));
   };
+  
+  // // Manejar cambios en los checkboxes
+  // const handleCheckboxChange = (checkboxId, isSelected) => {
+  //   setPurposes((prev) =>
+  //     prev.map((purpose) =>
+  //       purpose.id === checkboxId ? { ...purpose, is_active: isSelected } : purpose
+  //     )
+  //   );
+  // };
 
-
-  // cambios valores formularios
-  const handleFormsChange = (section, field, value) => {
-    setFormData((prev) => ({
+  const handleTogglePurpose = (section, index) => {
+    setFormData((prev) => {
+      // Clonamos el array de 'purposes' dentro de la sección
+      const newPurposes = [...prev[section].purposes];
+      // Invertimos el valor de 'is_active'
+      newPurposes[index].is_active = !newPurposes[index].is_active;
+  
+      return {
         ...prev,
         [section]: {
-            ...prev[section],
-            [field]: value,
+          ...prev[section],
+          purposes: newPurposes,
         },
-    }));
+      };
+    });
   };
+  
 
   const handleSaveButton = async () => {
     try {
-        await patchCondicionesContratacion(id, formData);
-        alert("Datos guardados con éxito");
-        setActiveContent('Textos legales');
+      await patchCondicionesContratacion(id, formData);
+      alert("Datos guardados con éxito");
+      setActiveContent('Textos legales');
     } catch (error) {
-        alert("Error al guardar los datos");
+      alert("Error al guardar los datos");
     }
-};
-
+  };
+  
 
   if (loading) {
-      return <LoadingPage/>;
+    return <LoadingPage/>;
   }
+
+  if (!formData) {
+      return <p>Error al cargar los datos.</p>;
+  }
+
   return (
     <div className={styles['container-caracteristicas']}>
       {/* Primer Texto */}
@@ -96,21 +99,20 @@ function CCPage({ id, setActiveContent }) {
         <QuestionsFormat
           ask="¿Dispone de registro de usuarios?"
           options={["Si", "No"]}
-          formId="registro_usuarios?"
+          formId="registro-usuarios-cc"
           selectedValue={formData.comercio_electronico.registro_de_usuarios}
           onChange={(value) =>
-            handleQuestionChange('comercio_electronico', 'registro_de_usuarios', value)
+              handleQuestionChange('comercio_electronico', 'registro_de_usuarios', value)
           }
         />
 
         {/* // */}
         <p>En mi web, realizo la venta de...</p>
         <div className={styles['productos-servicios']}>
-          <CheckList 
-              form="comercio_electronico"
-              purposes={formData.comercio_electronico.purposes}
-              onCheckboxChange={handleCheckboxChange}
-              row={true}
+          <CheckList
+            purposes = {formData.comercio_electronico.purposes}
+            // onCheckboxChange={handleCheckboxChange} 
+            row={true}
           />
         </div>
       </div>
@@ -118,29 +120,26 @@ function CCPage({ id, setActiveContent }) {
       <div className={styles["separator"]}></div>
 
       <div className={styles['formularios-question']}>
-        <p>Desistimiento:</p>
-        <div className={styles['check-desistimiento']}>
-          <p>Opciones para excluir el desistimiento:</p>
-          <CheckList 
-              form="desistimiento"
-              purposes={formData.desistimiento.purposes}
-              onCheckboxChange={handleCheckboxChange}
-          />
-          <p>Plazo de desistimiento</p>
-          <FieldTextFormat
-            label={
-              <>
-                *Plazo del que dispone el cliente desde la recepción del pedido, para desistir voluntariamente su compra.<br />
-                Ejemplo: 14 días naturales<br />
-              </>
-            }
-            value={formData.desistimiento.plazo_de_desistimiento}
-            onChange={(e) =>
-              handleFormsChange('desistimiento', 'plazo_de_desistimiento', e.target.value)
-            }
-          />
-        </div>
+      <p>Desistimiento:</p>
+      <div className={styles['check-desistimiento']}>
+        <p>Opciones para excluir el desistimiento:</p>
+        
+        <CheckList
+          purposes={formData.desistimiento.purposes}
+          onCheckboxChange={(index) => handleTogglePurpose("desistimiento", index)}
+          row={false}
+        />
+
+        {/* Aquí podrías añadir, por ejemplo, el plazo de desistimiento si es editable */}
+        <p>{formData.desistimiento.plazo_de_desistimiento.pregunta}</p>
+        <FieldTextFormat
+          label={formData.desistimiento.plazo_de_desistimiento.ejemplo}
+          // value={...}
+          // onChange={...}
+        />
       </div>
+    </div>
+
 
       <div className={styles["separator"]}></div>
 
@@ -149,9 +148,9 @@ function CCPage({ id, setActiveContent }) {
         <div className={styles['check-desistimiento']}>
           <p>Formas de pago</p>
           <CheckList 
-              form="pago"
-              purposes={formData.pago.purposes}
-              onCheckboxChange={handleCheckboxChange}
+            purposes={formData.pago.purposes}
+            onCheckboxChange={(index) => handleTogglePurpose("pago", index)}
+            row={true}
           />
         </div>
       </div>
@@ -183,20 +182,18 @@ function CCPage({ id, setActiveContent }) {
             <p className={styles['metodos-envios']}>Métodos de envío</p>
             <div className={styles['productos-servicios']}>
               <CheckList 
-                  form="envio"
-                  purposes={formData.envio.purposes}
-                  onCheckboxChange={handleCheckboxChange}
-                  row={true}
+                purposes={formData.envio.Métodos_de_envío.purposes}
+                onCheckboxChange={(index) => handleTogglePurpose("envio", index)}
+                row={true}
               />
             </div>
             <p>Plazo de entrega</p>
             <p className={styles['plazo-envio-mini-text']}>*Plazo que pasa desde el día de la confirmación del pedido, hasta que el cliente lo recibe.</p>
             <FieldTextFormat
               label="Ejemplo: 14 días naturales"
-              value={formData.envio.Plazo_de_entrega}
-              onChange={(e) =>
-                handleFormsChange('envio', 'Plazo_de_entrega', e.target.value)
-              }
+              // value={text}
+              // onChange={handleChange}
+              // row={true}
             />
           </div>
           <div
@@ -216,26 +213,20 @@ function CCPage({ id, setActiveContent }) {
         <div className={styles['check-desistimiento']}>
           <FieldTextFormat
               label="Horario"
-              value={formData.Servicio_atencion_cliente.Horario}
-              onChange={(e) =>
-                handleFormsChange('Servicio_atencion_cliente', 'Horario', e.target.value)
-              }
+              // value={text}
+              // onChange={handleChange}
               // row={true}
             />
           <FieldTextFormat
               label="Teléfono"
-              value={formData.Servicio_atencion_cliente.Teléfono}
-              onChange={(e) =>
-                handleFormsChange('Servicio_atencion_cliente', 'Teléfono', e.target.value)
-              }
+              // value={text}
+              // onChange={handleChange}
               // row={true}
             />
           <FieldTextFormat
               label="Email"
-              value={formData.Servicio_atencion_cliente.Email}
-              onChange={(e) =>
-                handleFormsChange('Servicio_atencion_cliente', 'Email', e.target.value)
-              }
+              // value={text}
+              // onChange={handleChange}
               // row={true}
             />
         </div>
@@ -248,27 +239,25 @@ function CCPage({ id, setActiveContent }) {
   );
 }
 
-function CheckList({ form, purposes, onCheckboxChange, row = false }) {
-  return (
-    <div
-    className={classNames(styles['form-checklist'], {
-        [styles['row']]: row,
-        [styles['column']]: !row,
-    })}
->
-      {/* <div className={styles['form-checklist']}> */}
-          {purposes.map((purpose) => (
-              <CheckBoxFormat
-                  key={purpose.ask} // Asegúrate de que 'ask' sea único dentro de cada formulario
-                  formId={purpose.ask}
-                  ask={purpose.ask}
-                  isSelected={purpose.is_active}
-                  updateState={(id, isSelected) => onCheckboxChange(form, id, isSelected)}
-                  row={row}
-              />
-          ))}
-      </div>
-  );
-}
 
 export default CCPage;
+
+function CheckList({ purposes, onCheckboxChange, row = false }) {
+  return (
+    <div
+      className={`${styles['form-checklist']} ${
+        row ? styles['row-layout'] : styles['column-layout']
+      }`}
+    >
+      {purposes.map((purpose, index) => (
+        <CheckBoxFormat
+          key={`${purpose.ask}-${index}`} // clave única
+          formId={`purpose-${index}`}     // formId único
+          ask={purpose.ask}
+          isSelected={purpose.is_active}
+          updateState={() => onCheckboxChange(index)}
+        />
+      ))}
+    </div>
+  );
+}

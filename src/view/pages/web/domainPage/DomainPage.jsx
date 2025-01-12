@@ -38,7 +38,7 @@ function DomainPage({ domain, onNavigate, domainId }) {
             case 'Formularios':
                 return <FormulariosPage setActiveContent={setActiveContent} />;
             case 'Condiciones de contratacion':
-                return <CCPage setActiveContent={setActiveContent} />;
+                return <CCPage id={domainId} setActiveContent={setActiveContent} />;
             default:
                 return <TextosLegalesPage setActiveContent={setActiveContent} />;
         }

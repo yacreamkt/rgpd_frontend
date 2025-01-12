@@ -144,18 +144,19 @@
   display: flex;
 }
   
-@media (max-width: 750px) {
+@media (max-width: 1161px) {
   .title {
     font-size: 15px;
-    font-weight: bold;
-    margin-bottom: 20px;
+  }
+
+  .backButton{
+    margin: 10px 5px;
+    padding: 5px 10px;
   }
 
   .deleteButton {
-    display: inline-block;
     margin: 12px 0px;
-    padding: 0px 3px;
-    background-color:  var(--verdeApp); /* Color rojo similar a la imagen */
+    padding: 5px 10px;
   }
 
   .container {

@@ -6,7 +6,7 @@ import FieldTextFormat from '../../../../../utils/components/fieldtextformat/Fie
 import { getCharacteristicsId, putCharacteristicsId } from "../../../../../../data/datasource/remote/service/websites/caracteristicas/HandlesCharacteristics";
 import LoadingPage from '../../../../../utils/components/loadingpage/LoadingPage';
 
-function CaracteristicasPage({ domai, id }) {
+function CaracteristicasPage({ domai, id, setActiveContent }) {
     const [text, setText] = useState(domai);
     const [formData, setFormData] = useState(null); // Inicialmente vacío
     const [loading, setLoading] = useState(true); // Indicador de carga
@@ -47,6 +47,7 @@ function CaracteristicasPage({ domai, id }) {
             console.log("Datos a enviar:", formData);
             await putCharacteristicsId(id, formData); // Pasar formData con los cambios
             alert("Datos guardados con éxito");
+            setActiveContent('Textos legales');
         } catch (error) {
             console.error("Error al guardar los datos:", error);
             alert("Error al guardar los datos");

@@ -4,7 +4,7 @@ import SaveButton from '../../../../../utils/components/savebutton/ButtonSave'
 import QuestionsFormat from '../../../../../utils/components/radiobuttonformat/RadioButtonFormat'
 
 
-function FormulariosPage() {
+function FormulariosPage({ setActiveContent }) {
   const [formData, setFormData] = useState({
     formulario: {
       tiene_formulario: 'Si',
@@ -23,6 +23,7 @@ function FormulariosPage() {
 
   const handleSaveButton = () => {
     console.log("Guardado:");
+    setActiveContent('Textos legales');
   };
 
   return (

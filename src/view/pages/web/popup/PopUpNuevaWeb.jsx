@@ -4,6 +4,7 @@ import { postRegisterDomain } from "../../../../data/datasource/remote/service/w
 import { postRegisterCharacteristicsDefault } from "../../../../data/datasource/remote/service/websites/caracteristicas/HandlesCharacteristics";
 import { postLegalNoticesDefault } from "../../../../data/datasource/remote/service/websites/legal-notices/HandlesLegalNotices";
 import { postPrivacySettingsDefault } from "../../../../data/datasource/remote/service/websites/privacy-settings/HandlesDomain";
+import { postHandlesCondicionesContratacionDefault } from "../../../../data/datasource/remote/service/websites/condicionesdecontratacion/HandlesCondicionesContratacion"
 
 const PopUpNuevaWeb = ({ isOpen, onClose, onAdd }) => {
   const [url, setUrl] = useState(""); // Estado para la URL
@@ -47,6 +48,7 @@ const PopUpNuevaWeb = ({ isOpen, onClose, onAdd }) => {
       await postRegisterCharacteristicsDefault(response.datos.id);
       await postLegalNoticesDefault(response.datos.id);
       await postPrivacySettingsDefault(response.datos.id);
+      await postHandlesCondicionesContratacionDefault(response.datos.id);
 
       // Si la solicitud es exitosa, llama a onAdd con los datos del nuevo sitio
       onAdd(response.datos); // Asume que `response.datos` contiene el nuevo sitio web
@@ -75,7 +77,7 @@ const PopUpNuevaWeb = ({ isOpen, onClose, onAdd }) => {
           <label className={styles.label}>URL:</label>
           <input
             type="text"
-            placeholder="https://"
+            placeholder="ejemplo.com"
             value={url}
             onChange={(e) => setUrl(e.target.value)}
             className={styles.input}

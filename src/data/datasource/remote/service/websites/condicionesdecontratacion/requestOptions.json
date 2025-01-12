@@ -68,10 +68,7 @@
             "is_active": false
             }
         ],
-        "plazo_de_desistimiento": {
-            "pregunta": "Plazo del que dispone el cliente desde la recepción del pedido, para desistir voluntariamente su compra.",
-            "ejemplo": "Ejemplo: 14 días naturales"
-        }
+        "plazo_de_desistimiento": ""
     },
 
     "pago": {
@@ -100,9 +97,8 @@
     },
 
     "envio": {
-        "contratado": "",
-        "Métodos de envío": {
-            "purposes": [
+        "contratado_servicio_mensajería": "",
+        "purposes": [
                 {
                 "ask": "Servicio urgente",
                 "is_active": false
@@ -120,11 +116,7 @@
                 "is_active": false
                 }
             ],
-            "plazo_de_desistimiento": {
-                "pregunta": "Plazo del que dispone el cliente desde la recepción del pedido, para desistir voluntariamente su compra.",
-                "ejemplo": "Ejemplo: 14 días naturales"
-            }
-        }
+            "Plazo_de_entrega": ""
     },
 
     "Servicio_atencion_cliente":{
@@ -133,6 +125,3 @@
         "Email": ""
     }
 }
-
-
-

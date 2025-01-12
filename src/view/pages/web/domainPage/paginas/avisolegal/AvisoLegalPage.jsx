@@ -7,7 +7,7 @@ import styles from './AvisoLegal.module.css'
 import LoadingPage from '../../../../../utils/components/loadingpage/LoadingPage';
 
 
-function AvisoLegalPage ({id}) {
+function AvisoLegalPage ({id, setActiveContent}) {
   const [formData, setFormData] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -42,6 +42,7 @@ function AvisoLegalPage ({id}) {
       try {
           await patchLegalNoticesId(id, formData); // Pasar formData con los cambios
           alert("Datos guardados con éxito");
+          setActiveContent('Textos legales');
       } catch (error) {
           alert("Error al guardar los datos");
       }
