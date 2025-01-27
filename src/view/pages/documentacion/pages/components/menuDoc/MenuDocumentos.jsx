@@ -1,29 +1,35 @@
 import React, { useState } from "react";
-import styles from '../../PaginasDomumentos.module.css';
+import styles from './MenuDocumentos.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 
 function MenuDocumentos({ menuItems, onDocumentSelect, onNavigate }) {
-  const [activeItem, setActiveItem] = useState(null); // Elemento seleccionado
-  const [expandedItem, setExpandedItem] = useState(null); // Elemento con submenú desplegado
+  const [activeItem, setActiveItem] = useState(null); 
+  const [expandedItem, setExpandedItem] = useState(null); 
+  const [selectedSubItem, setSelectedSubItem] = useState(null); // Nuevo estado para el subítem seleccionado
 
-  const handleItemClick = (item) => {
-    setActiveItem(item); // Actualiza el elemento activo
-    setExpandedItem(item === expandedItem ? null : item); // Alterna el desplegado
+  const handleItemClick = (itemTitle) => {
+    setActiveItem(itemTitle);
+    setExpandedItem(prev => (prev === itemTitle ? null : itemTitle));
   };
 
-  const handleSubItemClick = (title, subitem) => {
-    onDocumentSelect(title, subitem); // Llama a la función pasada desde el padre
+  const handleSubItemClick = (e, title, subitem) => {
+    e.stopPropagation(); 
+    setActiveItem(title);
+    setExpandedItem(title); 
+    setSelectedSubItem(subitem); // Actualiza el subítem seleccionado
+    onDocumentSelect(title, subitem);
   };
 
   const handleNavigation = (back) => {
     onNavigate(back, null, null, null);
-  }
+  };
 
   return (
     <div className={styles.sidebar}>
-      {/* ⬅ */}
-      <p className={styles.backLink} onClick={() => handleNavigation("documentacion")} >◀️ Centro de Documentación</p> 
+      <p className={styles.backLink} onClick={() => handleNavigation("documentacion")}>
+        ◀️ Centro de Documentación
+      </p>
       <ul>
         {menuItems.map((item) => (
           <li
@@ -38,19 +44,21 @@ function MenuDocumentos({ menuItems, onDocumentSelect, onNavigate }) {
                 className={styles.toggleIcon}
               />
             </div>
-            {expandedItem === item.title && (
-              <ul className={styles.submenu}>
-                {item.subitems.map((subitem, index) => (
-                  <li
-                    key={index}
-                    className={styles.submenuItem}
-                    onClick={() => handleSubItemClick(item.title, subitem)}
-                  >
-                    {subitem}
-                  </li>
-                ))}
-              </ul>
-            )}
+            <ul
+              className={`${styles.submenu} ${expandedItem === item.title ? styles.expanded : ""}`}
+            >
+              {item.subitems.map((subitem, index) => (
+                <li
+                  key={index}
+                  className={`${styles.submenuItem} ${
+                    selectedSubItem === subitem ? styles.selected : ""
+                  }`} // Aplica la clase si el subítem está seleccionado
+                  onClick={(e) => handleSubItemClick(e, item.title, subitem)}
+                >
+                  {subitem}
+                </li>
+              ))}
+            </ul>
           </li>
         ))}
       </ul>

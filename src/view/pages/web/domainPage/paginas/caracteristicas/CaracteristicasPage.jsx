@@ -13,6 +13,7 @@ function CaracteristicasPage({ domai, id, setActiveContent }) {
 
     // Cargar datos al montar el componente
     useEffect(() => {
+        window.scrollTo(0, 0);
         const fetchData = async () => {
             try {
                 console.log("ID:", id);
@@ -77,7 +78,7 @@ function CaracteristicasPage({ domai, id, setActiveContent }) {
             <div className={styles['information']}>
                 <h5>CARACTERÍSTICAS DE LA WEB</h5>
                 <FieldTextFormat
-                    label="Datos de autorización"
+                    label="URL:"
                     value={text}
                     onChange={handleChange}
                     row={true}

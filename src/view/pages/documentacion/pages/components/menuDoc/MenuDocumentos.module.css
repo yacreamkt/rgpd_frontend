@@ -1,0 +1,100 @@
+.sidebar {
+    height: 100vh;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+    min-width: 250px;
+    white-space: normal;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    padding: 7px 0;
+    text-align: start;
+}
+
+.backLink {
+    cursor: pointer;
+    color: var(--verdeApp);
+    font-weight: bold;
+}
+
+.backLink:hover {
+    color: var(--verdeApp2);
+}
+
+.menuItem {
+    padding: 15px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.menuItem:hover {
+    background-color: #f0f0f0;
+    color: var(--verdeApp);
+}
+
+.menuItem.active {
+    background-color: var(--fondo);
+    color: var(--verdeApp);
+}
+
+.menuHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggleIcon {
+    margin-right: 10px;
+}
+
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    padding-left: 20px;
+    margin-top: 10px;
+}  
+
+.submenu.expanded {
+    max-height: 500px; /* Ajusta según el tamaño máximo esperado */
+}
+
+.submenuItem {
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.submenuItem:hover {
+    color: var(--verdeApp);
+    background-color: #f0f0f0;
+}
+
+.submenuItem.selected {
+    color: var(--verdeApp);
+    background-color: #e6f7e6; /* Un color de fondo suave para destacar */
+    font-weight: bold; /* Opcional, para darle más énfasis */
+    border-radius: 5px;
+}
+  
+/* Medianas pantallas (Tablets) */
+@media (max-width: 1157px) {
+    .sidebar {
+        height: auto;
+        background-color: #fff;
+        border-right: 1px solid #ddd;
+        min-width: 250px;
+        white-space: normal;
+    }
+}

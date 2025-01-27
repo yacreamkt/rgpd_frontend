@@ -8,10 +8,10 @@
     background-color: #f9f9f9;
     box-sizing: border-box;
     width: 100%;
-  }
+}
   
-  /* Contenedor para los dominios */
-  .container-dominios {
+/* Contenedor para los dominios */
+.container-dominios {
     width: 100%;
     max-width: 1200px;
     background-color: white;
@@ -19,26 +19,26 @@
     box-sizing: border-box;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+}
   
   /* Sección del encabezado */
-  .header {
+.header {
     text-align: center;
     margin-bottom: 30px;
-  }
+}
   
-  .header h1 {
+.header h1 {
     font-size: 2rem;
     color: #333;
-  }
+}
   
-  .header p {
-    font-size: 1rem;
+.header p {
+    font-size: 14px;
     color: #666;
-  }
+}
   
-  /* Sección destacada */
-  .featuredSection {
+/* Sección destacada */
+.featuredSection {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -49,33 +49,33 @@
     margin-bottom: 30px;
     width: 100%;
     box-sizing: border-box;
-  }
+}
   
-  .featuredImage {
+.featuredImage {
     flex: 0 0 100px;
     height: 100px;
     background-color: #ddd;
     border-radius: 8px;
     margin-right: 20px;
-  }
+}
   
-  .featuredInfo {
+.featuredInfo {
     flex: 1;
     min-width: 200px;
-  }
+}
   
-  .featuredInfo h2 {
+.featuredInfo h2 {
     font-size: 1.5rem;
     color: #333;
-  }
+}
   
-  .featuredInfo p {
+.featuredInfo p {
     font-size: 1rem;
     color: #666;
     margin: 10px 0;
-  }
+}
   
-  .downloadButton {
+.downloadButton {
     background-color: var(--verdeApp);
     color: white;
     border: none;
@@ -83,92 +83,52 @@
     padding: 10px 15px;
     cursor: pointer;
     font-size: 1rem;
-  }
-  
-  .downloadButton:hover {
-    background-color: var(--verdeApp2);
-  }
-  
-  /* Sección de más descargados */
-  .mostDownloaded {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .mostDownloaded h3 {
-    font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .mostDownloaded ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .mostDownloaded li {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 5px;
-  }
-  
-  /* Categorías */
-.categories {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 10px;
-    width: 100%;
-    box-sizing: border-box;
 }
-
-
-/* Tarjeta de categoría */
-.categoryCard {
+  
+.downloadButton:hover {
+  background-color: var(--verdeApp2);
+}
+  
+/* Sección de más descargados */
+.mostDownloaded {
   background-color: white;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  cursor: pointer;
-}
-
-.categoryCard h4 {
-    font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 10px;
+  margin-bottom: 30px;
+  width: 100%;
+  box-sizing: border-box;
 }
   
-.categoryCard ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+.mostDownloaded h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
 }
   
-.categoryCard li {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 15px;
+.mostDownloaded ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-.categoryCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-
-.categoryCard li:hover {
-  color: var(--verdeApp);
-  text-decoration: underline;
+.mostDownloaded li {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 5px;
 }
   
-  /* Ajustes responsivos */
-  @media (max-width: 768px) {
+/* Categorías */
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+  
+/* Ajustes responsivos */
+@media (max-width: 768px) {
     .featuredSection {
       flex-direction: column;
       align-items: flex-start;
@@ -209,7 +169,6 @@
     }
     
   }
-
 
 .search-bar {
   display: flex;

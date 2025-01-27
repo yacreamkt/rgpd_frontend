@@ -1,0 +1,49 @@
+/* Tarjeta de categoría */
+.categoryCard {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+  
+.categoryCard h4 {
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+    /* margin-bottom: 10px; */
+}
+    
+.categoryCard ul {
+    list-style-type: none;
+}
+    
+.categoryCard li {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+  
+.categoryCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.categoryCard:hover .text-saber-mas {
+    color: var(--verdeApp);
+}
+  
+.categoryCard li:hover {
+    color: var(--verdeApp);
+    text-decoration: underline;
+}
+
+.text-saber-mas {
+    text-align: end;
+    color: #666;
+}

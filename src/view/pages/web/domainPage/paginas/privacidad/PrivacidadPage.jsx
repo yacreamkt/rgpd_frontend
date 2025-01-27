@@ -12,21 +12,22 @@ function PrivacidadPage({id, setActiveContent}) {
   const [loading, setLoading] = useState(true); // Indicador de carga
 
     // Cargar datos al montar el componente
-  useEffect(() => {
-      const fetchData = async () => {
-          try {
-              const response = await getPrivacySettings(id);
-              setPurposes(response.purposes);
-              setText(response.additional_settings)
-              setLoading(false);
-          } catch (error) {
-              alert("Error al cargar los datos:", error);
-              setLoading(false);
-          }
-      };
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        const fetchData = async () => {
+            try {
+                const response = await getPrivacySettings(id);
+                setPurposes(response.purposes);
+                setText(response.additional_settings)
+                setLoading(false);
+            } catch (error) {
+                alert("Error al cargar los datos:", error);
+                setLoading(false);
+            }
+        };
 
-      fetchData();
-  }, [id]);
+        fetchData();
+    }, [id]);
 
   // Manejar cambios en los checkboxes
   const handleCheckboxChange = (checkboxId, isSelected) => {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../../PaginasDomumentos.module.css";
+import styles from "./ModeloDoc.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 import PopUpDocument from "../../../components/popUp/PopUpDocument";

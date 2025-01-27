@@ -24,7 +24,7 @@
   
   /* Estilo del botón "X" */
   .sidebar__close {
-    font-size: 12px; /* Tamaño del botón */
+     /* Tamaño del botón */
     /* background: none; */
     /* border: none; */
     cursor: pointer;

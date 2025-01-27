@@ -1,10 +1,15 @@
-import React from 'react';
+import { useEffect } from "react";
 import styles from './Cookies.module.css'
 import SaveButton from '../../../../../utils/components/savebutton/ButtonSave'
 import QuestionsFormat from '../../../../../utils/components/radiobuttonformat/RadioButtonFormat'
 import CookiesTable from "./components/table/CookiesTable";
 
 function CookiesPage({ setActiveContent }) {
+
+    // Cargar datos al montar el componente
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    });
 
   const handleSaveButton = () => {
     console.log("Guardado:");

@@ -30,165 +30,23 @@
 }
 
 .content-info {
-display: flex;
-border-bottom: 1px solid #ddd;
-height: auto;
-width: 100%;
-box-sizing: border-box;
-overflow: hidden; /* Evita que el contenido interno desborde */
-}
-
-.sidebar {
-height: 100vh; /* Abarca toda la altura de la ventana */
-background-color: #fff; /* Asegura que tenga fondo blanco */
-border-right: 1px solid #ddd;
-min-width: 250px;
-white-space: normal;
-}
-
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.menuItem {
-padding: 15px 10px;
-/* margin-bottom: 10px; */
-border-radius: 5px;
-cursor: pointer;
-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-}
-
-.menuItem:hover {
-background-color: #f0f0f0;
-color: var(--verdeApp);
-}
-
-.menuItem.active {
-background-color: var(--fondo);
-color: var(--verdeApp);
-}
-
-.menuHeader {
-display: flex;
-align-items: center;
-justify-content: space-between;
-}
-
-.toggleIcon {
-margin-right: 10px;
-
-}
-
-.submenu {
-margin-top: 10px;
-padding-left: 20px;
-}
-
-.submenuItem {
-color: #666;
-display: flex;
-align-items: center;
-gap: 10px;
-}
-
-.submenuIcon {
-color: #d32f2f;
-}
-
-.title {
-color: #333;
-margin-bottom: 20px;
-}
-
-.content h3 {
-color: #333;
-margin-bottom: 10px;
-}
-
-.content p, .content ul {
-color: #666;
-margin-bottom: 20px;
-}
-
-.content ul {
-padding-left: 20px;
-}
-
-.content ul li {
-list-style: disc;
-margin-bottom: 5px;
-}
-
-.pdfCard {
-display: flex;
-align-items: center;
-gap: 10px;
-padding: 15px;
-border: 1px solid #ddd;
-border-radius: 5px;
-background-color: white;
-margin-bottom: 20px;
-}
-
-.pdfIcon {
-  font-size: 40px;
-  color: #d32f2f;
-}
-
-.downloadButton {
-  background-color: var(--verdeApp);
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  font-weight:600;
-}
-
-
-.downloadButton:hover {
-background-color: var(--verdeApp2);
-}
-
-.info-page {
-white-space: normal;
-text-align: justify;
-}
-
-/* ///// */
-
-/* Main content */
-
-.mainContent {
-min-width: 0;
-padding: 20px;
-box-sizing: border-box;
-}
-
-.model {
   display: flex;
-  flex-direction: column;
-  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  height: auto;
+  width: 100%;
   box-sizing: border-box;
-  background-color: #f9f9f9;
-  border-left: 1px solid #ddd;
+  overflow: hidden;
 }
 
 .main-model-container {
   display: flex;
 }
 
-/* ///Nuenvo/// */
-
 /* Medianas pantallas (Tablets) */
 @media (max-width: 1490px) and (min-width: 1157px) {
   .main-model-container {
     flex-direction: column;
-    gap: 20px; /* Espaciado entre mainContent y model */
+    gap: 20px;
   }
 }
 /* Medianas pantallas (Tablets) */
@@ -199,53 +57,17 @@ box-sizing: border-box;
   .content-info {
     flex-direction: column;
   }
+  .container {
+    padding: 20px 10px; /* Reduce padding para móviles */
+  }
+    
+  .container_header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px; /* Espaciado entre encabezados */
+  }
 
-  .sidebar {
-    height: auto; /* Abarca toda la altura de la ventana */
-    background-color: #fff; /* Asegura que tenga fondo blanco */
-    border-right: 1px solid #ddd;
-    min-width: 250px;
-    white-space: normal;
-    }
-    
-    .mainContent {
-      padding: 20px;
-      box-sizing: border-box;
-      }
-      
-      .container {
-        padding: 20px 10px; /* Reduce padding para móviles */
-      }
-    
-      .container_header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px; /* Espaciado entre encabezados */
-      }
-    
-      .main_model_container {
-        padding: 10px 0; /* Ajuste de padding */
-      }
-    
-
-    
-      .pdfCard {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    
-      .downloadButton {
-        padding: 8px 12px;
-      }
-    
-}
-
-.backLink { 
-  cursor: pointer;
-  color: var(--verdeApp);
-  font-weight: bold;
-}
-
-.backLink:hover { 
-  color: var(--verdeApp2);
+  .main_model_container {
+    padding: 10px 0; /* Ajuste de padding */
+  }
 }

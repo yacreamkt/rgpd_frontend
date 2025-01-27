@@ -13,6 +13,7 @@ function AvisoLegalPage ({id, setActiveContent}) {
 
     // Cargar datos al montar el componente
     useEffect(() => {
+      window.scrollTo(0, 0);
       const fetchData = async () => {
           try {
               const response = await getLegalNoticesId(id);

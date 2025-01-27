@@ -1,15 +1,15 @@
 .information{
-    width: 900px;
     word-wrap: break-word;
-    white-space: normal; /* Asegura que el texto se ajuste al ancho del contenedor */
-    overflow-wrap: break-word; /* Alternativa moderna para gestionar palabras largas */
+    white-space: normal;
+    overflow-wrap: break-word;
     margin: 0 auto;
+    padding: 0 40px;
   }
 
 .registro-items {
     display: flex;
     flex-direction: column;
-    width: 85%;
+    width: 100%;
     margin-left: 10%;
 }
 

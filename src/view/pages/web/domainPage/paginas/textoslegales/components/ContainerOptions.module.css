@@ -5,7 +5,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra sutil debajo */
     padding: 20px;  /* Espaciado interno para que los elementos no toquen el borde */
     /* max-width: 300px; */
-    margin: 30px auto 10px 100px;  /* Centra el contenedor en la página y le da un margen alrededor */
+    margin: 30px auto 10px;  /* Centra el contenedor en la página y le da un margen alrededor */
     box-sizing: border-box;  /* Asegura que el padding no afecte el tamaño total del contenedor */
   }
   
@@ -30,7 +30,7 @@
     padding: 10px 10px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 12px;
+    
     margin-top: 10px;
     margin-right: 10px;
     transition: background-color 0.3s;

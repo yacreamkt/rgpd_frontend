@@ -81,8 +81,3 @@ function PaginasDomumentos({ onNavigate, formData }) {
 }
 
 export default PaginasDomumentos;
-
-            // <InfoDocumentos
-            //   title={selectedDocument.title}
-            //   subitems={selectedDocument.subitem}
-            // />

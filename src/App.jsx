@@ -31,6 +31,9 @@ function App() {
     if (domainName) setDomain(domainName);
     if (id) setDomainId(id);
     if (data) setDocData(data);
+
+    // Cuando cambies de ruta (o "página"), haces scroll hacia arriba
+    window.scrollTo(0, 0);
   };
 
   if (!isAuthenticated) {

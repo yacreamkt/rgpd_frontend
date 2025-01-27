@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from './Formularios.module.css'
 import SaveButton from '../../../../../utils/components/savebutton/ButtonSave'
 import QuestionsFormat from '../../../../../utils/components/radiobuttonformat/RadioButtonFormat'
 
 
 function FormulariosPage({ setActiveContent }) {
+    // Cargar datos al montar el componente
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    });
+
   const [formData, setFormData] = useState({
     formulario: {
       tiene_formulario: 'Si',

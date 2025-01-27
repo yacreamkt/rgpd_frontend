@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import styles from '../../PaginasDomumentos.module.css';
+import styles from './InfoDocumentos.module.css';
 // import path from '../../../../../utils/docsText'
 
 function InfoDocumentos({ title, subitems }) {

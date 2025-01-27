@@ -7,7 +7,7 @@
   --grisApp: #656363;
   /* --azulApp: #1f4b8f; */
   /* --amarilloApp: #f4d03f; */
-  
+  --tablets: 1157px; /* breakpoint */
 }
 
 body {
@@ -18,7 +18,9 @@ body {
   /* font-family: 'Arial', sans-serif; */
   /* font-family: monospace; */
   /* font-family: cursive; */
+  font-family: 'Poppins', sans-serif;
   font-size: 12px;
+  text-align: justify;
 }
 
 ::selection {

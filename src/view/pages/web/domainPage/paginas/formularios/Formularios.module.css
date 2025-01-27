@@ -6,15 +6,17 @@
 }
 
 .information{
-    width: 900px;
+    width: 100%;
     word-wrap: break-word;
     white-space: normal;
     overflow-wrap: break-word;
     margin: 0 auto;
+    padding: 0 40px;
 }
 
 .formularios-question {
-    width: 700px;
+    width: 100%;
+    padding-left: 80px;
 }
 
 .first-text{

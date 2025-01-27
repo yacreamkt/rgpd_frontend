@@ -8,8 +8,11 @@ import ProfileOptions from "./components/ProfileOptions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faX } from "@fortawesome/free-solid-svg-icons";
 
-function Header({ onNavigate }) { // Recibe onNavigate como prop
+function Header({ onNavigate }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  // AÑADE este estado para controlar el item activo
+  const [activeItem, setActiveItem] = useState('WEB');
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -23,6 +26,12 @@ function Header({ onNavigate }) { // Recibe onNavigate como prop
     sessionStorage.clear();
     localStorage.clear();
     window.location.reload();
+  };
+
+  // AÑADE este método para cambiar de item y navegar
+  // Lo usará el <Menu /> en vez de tener su propio estado.
+  const handleMenuItemClick = (page) => {
+    onNavigate(page);
   };
 
   return (
@@ -50,14 +59,26 @@ function Header({ onNavigate }) { // Recibe onNavigate como prop
             clientId="0122151"
             organizationName="Yacrea S.L."
             onLogout={handleLogout}
-            onNavigate={onNavigate} // Pasa onNavigate
+            onNavigate={onNavigate}
           />
         </div>
       </div>
 
       {/* Menú inferior en desktop */}
       <div className={`header__row header__bottom ${sidebarOpen ? "hidden" : ""}`}>
-        <Menu className="header__menu__nav" onItemClick={onNavigate} /> {/* Pasa onNavigate */}
+        {/*
+          Pasamos:
+          - className
+          - activeItem (quién está activo)
+          - setActiveItem (para actualizar el activo)
+          - onItemClick (para navegar)
+        */}
+        <Menu
+          className="header__menu__nav"
+          activeItem={activeItem}
+          setActiveItem={setActiveItem}
+          onItemClick={handleMenuItemClick}
+        />
       </div>
 
       {/* Overlay */}
@@ -74,7 +95,15 @@ function Header({ onNavigate }) { // Recibe onNavigate como prop
           </button>
         </div>
         <div className="sidebar__content">
-          <Menu className="sidebar__menu" onItemClick={onNavigate} /> {/* Pasa onNavigate */}
+          <Menu
+            className="sidebar__menu"
+            activeItem={activeItem}
+            setActiveItem={setActiveItem}
+            onItemClick={(page) => {
+              handleMenuItemClick(page);
+              toggleSidebar(); // Cerramos el sidebar al navegar
+            }}
+          />
         </div>
       </div>
     </header>

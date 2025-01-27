@@ -1,0 +1,32 @@
+.mainContent {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.title {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.content h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+  
+.content p, .content ul {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.info-page {
+    white-space: normal;
+    text-align: justify;
+}
+
+/* Medianas pantallas (Tablets) */
+@media (max-width: 1157px){
+    .mainContent {
+        padding: 20px;
+        box-sizing: border-box;
+    }
+}

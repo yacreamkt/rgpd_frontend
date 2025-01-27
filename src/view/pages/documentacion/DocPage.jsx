@@ -53,7 +53,7 @@ const DocPage = ({onNavigate}) => {
 
                 <div className={styles['search-bar']}>
                     <div className={styles.featuredSection}>
-                        <div className={styles.featuredImage}></div>
+                        {/* <div className={styles.featuredImage}></div> */}
                         <div className={styles.featuredInfo}>
                             <h2>Documento de Seguridad</h2>
                             <p>Este es el principal documento. Contiene las medidas de índole técnica y organizativa para garantizar la seguridad de los datos.</p>

@@ -1,11 +1,12 @@
 // Menu.js
-import React, { useState } from 'react';
+import React from 'react';
 
-function Menu({ className, onItemClick }) {
-  const [activeItem, setActiveItem] = useState('WEB'); // Valor inicial
-
+function Menu({ className, onItemClick, activeItem, setActiveItem }) {
   const handleClick = (item) => {
+    // Actualiza el activeItem en el padre
     setActiveItem(item);
+
+    // Mapeo de rutas
     const pageMap = {
       'INICIO': 'inicio',
       'TERCEROS': 'terceros',
@@ -19,6 +20,8 @@ function Menu({ className, onItemClick }) {
       'DOCUMENTACIÓN': 'documentacion',
     };
     const page = pageMap[item] || 'web';
+
+    // Llama al callback que navega
     onItemClick(page);
   };
 
@@ -28,43 +31,63 @@ function Menu({ className, onItemClick }) {
         <li 
           className={activeItem === 'INICIO' ? 'active' : ''}
           onClick={() => handleClick('INICIO')}
-        >INICIO</li>
+        >
+          INICIO
+        </li>
         <li 
           className={activeItem === 'TERCEROS' ? 'active' : ''}
           onClick={() => handleClick('TERCEROS')}
-        >TERCEROS</li>
+        >
+          TERCEROS
+        </li>
         <li 
           className={activeItem === 'EMPLEADOS' ? 'active' : ''}
           onClick={() => handleClick('EMPLEADOS')}
-        >EMPLEADOS</li>
+        >
+          EMPLEADOS
+        </li>
         <li 
           className={activeItem === 'TRATAMIENTOS' ? 'active' : ''}
           onClick={() => handleClick('TRATAMIENTOS')}
-        >TRATAMIENTOS</li>
+        >
+          TRATAMIENTOS
+        </li>
         <li 
           className={activeItem === 'RIESGOS' ? 'active' : ''}
           onClick={() => handleClick('RIESGOS')}
-        >RIESGOS</li>
+        >
+          RIESGOS
+        </li>
         <li 
           className={activeItem === 'RECURSOS' ? 'active' : ''}
           onClick={() => handleClick('RECURSOS')}
-        >RECURSOS</li>
+        >
+          RECURSOS
+        </li>
         <li 
           className={activeItem === 'WEB' ? 'active' : ''}
           onClick={() => handleClick('WEB')}
-        >WEB</li>
+        >
+          WEB
+        </li>
         <li 
           className={activeItem === 'DPO' ? 'active' : ''}
           onClick={() => handleClick('DPO')}
-        >DPO</li>
+        >
+          DPO
+        </li>
         <li 
           className={activeItem === 'ACADEMY' ? 'active' : ''}
           onClick={() => handleClick('ACADEMY')}
-        >ACADEMY</li>
+        >
+          ACADEMY
+        </li>
         <li 
           className={activeItem === 'DOCUMENTACIÓN' ? 'active' : ''}
           onClick={() => handleClick('DOCUMENTACIÓN')}
-        >DOCUMENTACIÓN</li>
+        >
+          DOCUMENTACIÓN
+        </li>
       </ul>
     </nav>
   );

@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px 150px;
+  padding: 0px 130px;
 }
 
 /* Estilos para el contenedor de los dos <h2> */
@@ -16,7 +16,7 @@
 
 /* Contenedor para los dominios */
 .container-dominios {
-  overflow-x: auto; /* Habilita el scroll horizontal */
+  /* overflow-x: auto; */
   white-space: nowrap; /* Asegura que las celdas no se rompan en varias líneas */
   display: block; /* Evita que los estilos de tabla interfieran */
 
@@ -166,4 +166,27 @@
   .container-dominios {
     padding: 5px;
   }
+
+}
+
+@media (min-width: 1600px){
+    /* Estilos para el contenedor de los dos <h2> */
+.container_header {
+  width: 1500px; 
+}
+
+/* Contenedor para los dominios */
+.container-dominios {
+  width: 1500px;
+}
+}
+
+@media (max-width: 906px) {
+  .container-dominios {
+    white-space: normal;
+    display: block; 
+    overflow: hidden; /* Elimina cualquier desbordamiento */
+  }
+
+
 }
